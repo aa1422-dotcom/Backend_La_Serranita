@@ -1,4 +1,4 @@
-package com.laserranita.backend.config;
+package com.laserranita.backend.config; // Asegúrate de que el paquete coincida con el tuyo
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,11 +13,12 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                // Le damos permiso a todas tus rutas
-                registry.addMapping("/api/v1/**")
-                        // Aquí pones el puerto de tu Vite/React
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                registry.addMapping("/**") // Aplica a todas tus rutas (/auth/login, /productos, etc.)
+                        .allowedOrigins(
+                                "http://localhost:5173", // Para que puedas seguir probando en tu PC
+                                "https://frontend-la-serranita.vercel.app" // La URL exacta de tu Vercel (SIN barra al final)
+                        )
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
