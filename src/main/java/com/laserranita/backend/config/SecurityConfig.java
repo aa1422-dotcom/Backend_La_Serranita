@@ -1,5 +1,6 @@
 package com.laserranita.backend.config;
 
+import org.springframework.security.config.Customizer;
 import java.util.Arrays;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
