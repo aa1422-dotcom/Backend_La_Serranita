@@ -22,4 +22,4 @@ jobs:
         cache: 'maven'
 
     - name: Verificar construcción de Imagen Docker
-      run: docker build -t backend-app:test -f .
+      run: docker build -t backend-app:test .
