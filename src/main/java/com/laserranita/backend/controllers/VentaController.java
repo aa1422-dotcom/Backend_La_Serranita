@@ -46,4 +46,22 @@ public class VentaController {
             return ResponseEntity.status(500).body("Error al actualizar venta: " + e.getMessage());
         }
     }
+
+    @PutMapping("/{id}/aprobar")
+    public ResponseEntity<?> aprobarVenta(@PathVariable Integer id) {
+        try {
+            return ResponseEntity.ok(ventaService.aprobarVenta(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Error al aprobar venta: " + e.getMessage());
+        }
+    }
+
+    @PutMapping("/{id}/rechazar")
+    public ResponseEntity<?> rechazarVenta(@PathVariable Integer id) {
+        try {
+            return ResponseEntity.ok(ventaService.rechazarVenta(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Error al rechazar venta: " + e.getMessage());
+        }
+    }
 }

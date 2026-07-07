@@ -15,8 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Aplica a todas tus rutas (/auth/login, /productos, etc.)
                         .allowedOrigins(
-                                "http://localhost:5173", // Para que puedas seguir probando en tu PC
-                                "https://frontend-la-serranita.vercel.app" // La URL exacta de tu Vercel (SIN barra al final)
+                                "http://localhost:5173" // Para que puedas seguir probando en tu PC
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                         .allowedHeaders("*")

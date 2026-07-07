@@ -114,4 +114,16 @@ public class Venta {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    @JsonProperty("comprobanteUrl")
+    @Column(name = "comprobante_url", columnDefinition = "TEXT")
+    private String comprobanteUrl;
+
+    public String getComprobanteUrl() {
+        return comprobanteUrl;
+    }
+
+    public void setComprobanteUrl(String comprobanteUrl) {
+        this.comprobanteUrl = comprobanteUrl;
+    }
 }

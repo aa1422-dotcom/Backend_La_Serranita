@@ -42,7 +42,7 @@ public class Producto {
     private LocalDate fechaVencimiento;
 
     @JsonProperty("imageUrl")
-    @Column(name = "image_url")
+    @Column(name = "image_url", columnDefinition = "TEXT")
     private String imageUrl;
 
     @Column(name = "alerta_enviada")

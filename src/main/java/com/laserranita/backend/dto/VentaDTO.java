@@ -6,12 +6,18 @@ import java.math.BigDecimal;
 public class VentaDTO {
     private String nombreCliente;
     private List<DetalleVentaDTO> detalle;
+    private String comprobanteUrl;
+    private String estado;
 
     // Getters y Setters
     public String getNombreCliente() { return nombreCliente; }
     public void setNombreCliente(String nombreCliente) { this.nombreCliente = nombreCliente; }
     public List<DetalleVentaDTO> getDetalle() { return detalle; }
     public void setDetalle(List<DetalleVentaDTO> detalle) { this.detalle = detalle; }
+    public String getComprobanteUrl() { return comprobanteUrl; }
+    public void setComprobanteUrl(String comprobanteUrl) { this.comprobanteUrl = comprobanteUrl; }
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
 
     public static class DetalleVentaDTO {
         private Integer idProducto;
